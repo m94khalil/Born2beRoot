@@ -1,0 +1,10 @@
+Q. What is Kdump?
+Ans. Kdump is a kernel crash dumping mechanism that allows you to save the contents of the system’s memory for later analysis. 
+For more details : https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/kernel_administration_guide/kernel_crash_dump_guide
+
+Q. What is SElinux?
+Ans. Security-Enhanced Linux (SELinux) is a security architecture for Linux® systems that allows administrators to have more control over 
+who can access the system. 
+For more details : https://www.redhat.com/en/topics/linux/what-is-selinux
+
+Q. 
