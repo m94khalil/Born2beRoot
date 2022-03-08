@@ -7,4 +7,21 @@ Ans. Security-Enhanced Linux (SELinux) is a security architecture for Linux® sy
 who can access the system. 
 For more details : https://www.redhat.com/en/topics/linux/what-is-selinux
 
-Q. 
+Q. What is AppArmor?
+Ans. AppArmor is a Mandatory Access Control framework. When enabled, AppArmor confines programs according to a set of rules that specify what
+files a given program can access. This proactive approach helps protect the system against both known and unknown vulnerabilities.
+For more details : https://wiki.debian.org/AppArmor#:~:text=AppArmor%20is%20a%20Mandatory%20Access,both%20known%20and%20unknown%20vulnerabilities.
+
+Q. What is diff between APT and Aptitude?
+Ans. Apt or Advanced Packaging Tool is a free and open source software which gracefully handles software installation and removal.
+Initially it was designed for Debian’s .deb packages but it has been made compatible with RPM Package Manager.
+Aptitude is front-end to advanced packaging tool which adds a user interface to the functionality, thus allowing a user to interactively search
+for a package and install or remove it. Initially created for Debain, Aptitude extends its functionality to RPM based distributions as well.
+For more details : https://www.tecmint.com/difference-between-apt-and-aptitude/
+
+Q. What is RPM?
+Ans. RPM (Red Hat Package Manager) is an default open source and most popular package management utility for Red Hat based systems like (RHEL, CentOS and Fedora).
+The tool allows system administrators and users to install, update, uninstall, query, verify and manage system software packages in Unix/Linux operating systems.
+The RPM formerly known as .rpm file, that includes compiled software programs and libraries needed by the packages. This utility only works with packages that 
+built on .rpm format.
+For more details: https://www.tecmint.com/20-practical-examples-of-rpm-commands-in-linux/
