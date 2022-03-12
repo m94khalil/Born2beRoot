@@ -17,5 +17,9 @@ be folder named by "goinfre". Use this folder to do the project. ***
 - select hard disk file location (in case of 42 Mac you need to select goinfre folder inside your username folder) since i am doing bonus i am going to select 30.8GB size (if you are only doing mandatory part select 8GB), then press create.
 - Now you can your virtual system on the left side section.
 - select the virtual system you just created and click settings in the top navigation bar (the settings you see are for the selected virtual system).
-- Inside settings you need to select the iso image of the operating system you selected for this you go to storage->attribute->Optical drive->click on the disk shape you see at the end of that row and goto the location where you saved the iso and select the iso image.
+- Inside settings you need to select the iso image of the operating system you want. For this you go to storage->attribute->Optical drive->click on the disk shape you see at the end of that row and goto the location where you saved the iso and select the iso image.
 - Now select the virtual machine you just created and press start.
+
+# Setting up user preferences
+
+- Now new window will pop up with Debian installer menu as shown below. (../images/Debian Installer menu.png)
