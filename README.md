@@ -22,4 +22,4 @@ be folder named by "goinfre". Use this folder to do the project. ***
 
 # Setting up user preferences
 
-- Now new window will pop up with Debian installer menu as shown below. (../images/Debian Installer menu.png)
+- Now new window will pop up with Debian installer menu as shown below. (./images/Debian Installer menu.png)
