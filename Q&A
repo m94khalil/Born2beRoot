@@ -25,3 +25,15 @@ The tool allows system administrators and users to install, update, uninstall, q
 The RPM formerly known as .rpm file, that includes compiled software programs and libraries needed by the packages. This utility only works with packages that 
 built on .rpm format.
 For more details: https://www.tecmint.com/20-practical-examples-of-rpm-commands-in-linux/
+
+Q. What is Linux Kernel?
+Ans. The Linux® kernel is the main component of a Linux operating system (OS) and is the core interface between a computer’s 
+hardware and its processes. It communicates between the 2, managing resources as efficiently as possible.
+For more details: https://www.redhat.com/en/topics/linux/what-is-the-linux-kernel
+
+Q. What is uname command in Linux?
+Ans. The uname tool is most commonly used to determine the processor architecture, the system hostname and the version of 
+the kernel running on the system.
+For more details: https://linuxize.com/post/uname-command-in-linux/#:~:text=The%20uname%20command%20is%20used%20to%20print%20basic%20system%20information,free%20to%20leave%20a%20comment
+
+Q. 
