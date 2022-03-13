@@ -407,4 +407,41 @@
   
   <img width="797" alt="Screen Shot 2022-03-13 at 2 14 10 PM" src="https://user-images.githubusercontent.com/51042907/158054829-0e5896c7-7d00-44f7-b513-6f48d2ccc2b8.png">
   
+  - wait minute or two to complete partioning of the disk.
+  
+  <img width="798" alt="Screen Shot 2022-03-13 at 2 16 47 PM" src="https://user-images.githubusercontent.com/51042907/158054925-1c8b9fb4-735b-4bd2-8284-9f531403e449.png">
+
+## Configure the package manager
+  
+- Select no and press enter since we allready have the installation media selected and no need to add an additional device.
+  
+  <img width="794" alt="Screen Shot 2022-03-13 at 2 19 03 PM" src="https://user-images.githubusercontent.com/51042907/158054990-a208cd14-c848-4bb6-a3b0-f9b7725883f9.png">
+  
+- Select Debian archive mirror country and press enter.
+  
+  <img width="795" alt="Screen Shot 2022-03-13 at 2 20 48 PM" src="https://user-images.githubusercontent.com/51042907/158055059-b26e1e17-0eb3-41a9-99a6-36f173341ebf.png">
+ 
+- Select the Debian archive mirror and press enter.
+  
+  <img width="798" alt="Screen Shot 2022-03-13 at 2 21 17 PM" src="https://user-images.githubusercontent.com/51042907/158055081-36519be7-ba9b-4359-bf54-a742bb41a870.png">
+
+- Keep Http proxy information as empty and select continue then press enter.
+  
+  <img width="789" alt="Screen Shot 2022-03-13 at 2 22 57 PM" src="https://user-images.githubusercontent.com/51042907/158055137-4c4fa37d-a542-4c12-ba7a-83f1dbf6cfdd.png">
+- wait a minute or two.
+  <img width="791" alt="Screen Shot 2022-03-13 at 2 23 26 PM" src="https://user-images.githubusercontent.com/51042907/158055154-592227dc-46f1-4230-bdb0-67831cfd40e6.png">
+
+- Select yes or no according to your choice then press enter.
+  
+  <img width="791" alt="Screen Shot 2022-03-13 at 2 24 17 PM" src="https://user-images.githubusercontent.com/51042907/158055187-d57b3f8e-71c2-4d9f-aae1-040005277a95.png">
+
+  - For this project we don't need any software and we need to unselect all and select continue then press enter.
+  
+  <img width="800" alt="Screen Shot 2022-03-13 at 2 26 13 PM" src="https://user-images.githubusercontent.com/51042907/158055244-794357cb-8635-4d2b-9772-f4226845134c.png">
+  
+  - Select yes to install the Grub boot loader then press enter.
+  
+  
+-   <img width="799" alt="Screen Shot 2022-03-13 at 2 26 45 PM" src="https://user-images.githubusercontent.com/51042907/158055269-25a3a830-96cd-4176-83f8-b91cd546a8a5.png">
+  
   
