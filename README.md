@@ -349,8 +349,62 @@
   
 <img width="794" alt="Screen Shot 2022-03-13 at 12 43 56 PM" src="https://user-images.githubusercontent.com/51042907/158051951-108530ab-aa71-4386-8cce-ad7a4fec93e2.png">
   
+- Now you have created the all the logical volume we needed in this project we can select finish and press enter.
+  
   <img width="800" alt="Screen Shot 2022-03-13 at 12 44 24 PM" src="https://user-images.githubusercontent.com/51042907/158051962-ea2980ac-2ae9-4c95-8b5c-8fc1a77869cf.png">
+
+- After finishing configuring LVM we get as shown below.
   
 <img width="814" alt="Screen Shot 2022-03-13 at 12 45 39 PM" src="https://user-images.githubusercontent.com/51042907/158051995-f546519d-6197-41be-949d-accd308af795.png">
+  
+- Now we are going to change the partition settings of LV home to what we need
+  
+  
+<img width="796" alt="Screen Shot 2022-03-13 at 1 59 49 PM" src="https://user-images.githubusercontent.com/51042907/158054345-8bb0a61c-c823-4288-af14-975088ea3fa2.png">
+<img width="794" alt="Screen Shot 2022-03-13 at 2 01 06 PM" src="https://user-images.githubusercontent.com/51042907/158054392-9a54f78e-cdf0-4294-9ae9-a1e8a33e9bf9.png">
+  
+- Now we are going to change the partition settings of LV root to what we need
+  
+  <img width="795" alt="Screen Shot 2022-03-13 at 2 02 18 PM" src="https://user-images.githubusercontent.com/51042907/158054432-c6de62ac-e7b5-4661-a9f7-3b471dbd25a3.png">
+
+<img width="797" alt="Screen Shot 2022-03-13 at 2 02 40 PM" src="https://user-images.githubusercontent.com/51042907/158054443-354e3b8f-d79b-4f92-b65c-728ee8c8a6c7.png">
+
+  - Now we are going to change the partition settings of LV srv to what we need
+  
+  <img width="793" alt="Screen Shot 2022-03-13 at 2 03 33 PM" src="https://user-images.githubusercontent.com/51042907/158054465-a880f830-1b8b-445a-9468-e1aa59204c30.png">
+
+  <img width="800" alt="Screen Shot 2022-03-13 at 2 04 03 PM" src="https://user-images.githubusercontent.com/51042907/158054480-9651a744-d2f8-4d2b-9ab0-b465313044a9.png">
+  
+  - Now we are going to change the partition settings of LV swap to what we need
+  
+<img width="793" alt="Screen Shot 2022-03-13 at 2 05 12 PM" src="https://user-images.githubusercontent.com/51042907/158054511-9c09416b-7cb3-415e-a630-f504c9510262.png">
+  <img width="792" alt="Screen Shot 2022-03-13 at 2 06 18 PM" src="https://user-images.githubusercontent.com/51042907/158054556-e53dcafb-7d90-4243-85fe-cebbd8c83d81.png">
+
+   - Now we are going to change the partition settings of LV tmp to what we need
+  
+  <img width="794" alt="Screen Shot 2022-03-13 at 2 08 00 PM" src="https://user-images.githubusercontent.com/51042907/158054616-d62f3d5b-458a-4de8-ae8f-62093d0727b6.png">
+
+<img width="798" alt="Screen Shot 2022-03-13 at 2 08 27 PM" src="https://user-images.githubusercontent.com/51042907/158054635-f1b4d528-d3b2-461f-a080-27b47c92066a.png">
+  
+  - Now we are going to change the partition settings of LV var to what we need
+  
+  <img width="797" alt="Screen Shot 2022-03-13 at 2 08 53 PM" src="https://user-images.githubusercontent.com/51042907/158054648-92e896ee-7415-4e9d-ae23-8f1691953b3d.png">
+
+  <img width="798" alt="Screen Shot 2022-03-13 at 2 09 50 PM" src="https://user-images.githubusercontent.com/51042907/158054674-1e91d5ce-44e1-4405-bed7-6ba75c8b7f1d.png">
+
+  
+- Now we are going to change the partition settings of LV var-log to what we need
+  <img width="796" alt="Screen Shot 2022-03-13 at 2 10 43 PM" src="https://user-images.githubusercontent.com/51042907/158054712-d6a4c0ab-c00b-4595-b102-03fa155109b5.png">
+
+
+  <img width="797" alt="Screen Shot 2022-03-13 at 2 11 42 PM" src="https://user-images.githubusercontent.com/51042907/158054746-a330b815-f547-41e0-966c-433d1a6d083d.png">
+  
+- After making all the changes as shown below select "Finish partitioning and write changes to disk".
+  
+  <img width="794" alt="Screen Shot 2022-03-13 at 2 13 27 PM" src="https://user-images.githubusercontent.com/51042907/158054805-3a12aee2-7035-44f8-b827-a37d0d387174.png">
+
+  - Select yes and press enter to confirm to write changes to the disks.
+  
+  <img width="797" alt="Screen Shot 2022-03-13 at 2 14 10 PM" src="https://user-images.githubusercontent.com/51042907/158054829-0e5896c7-7d00-44f7-b513-6f48d2ccc2b8.png">
   
   
