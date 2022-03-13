@@ -116,53 +116,88 @@
   
   <img width="791" alt="Screen Shot 2022-03-13 at 10 33 03 AM" src="https://user-images.githubusercontent.com/51042907/158048149-2f9a6966-d4fb-4459-bcec-1da19552e106.png">
 
-- <img width="797" alt="Screen Shot 2022-03-13 at 10 36 01 AM" src="https://user-images.githubusercontent.com/51042907/158048303-1f32919a-76b2-41f9-8df5-611ed9d822cd.png">
+- Select the SCSI3 (0, 0, 0) (sda) - 33.1 GB ATA VBOX HARDDISK, then continue.
+  
+  <img width="797" alt="Screen Shot 2022-03-13 at 10 36 01 AM" src="https://user-images.githubusercontent.com/51042907/158048303-1f32919a-76b2-41f9-8df5-611ed9d822cd.png">
 
+- Select yes for creating new partition on the table on this divice, then enter. 
+  
   <img width="792" alt="Screen Shot 2022-03-13 at 10 38 56 AM" src="https://user-images.githubusercontent.com/51042907/158048375-f76d0732-88eb-488d-b609-63dd4577de62.png">
 
-- <img width="795" alt="Screen Shot 2022-03-13 at 10 39 58 AM" src="https://user-images.githubusercontent.com/51042907/158048401-a4b25d7b-518c-40ae-b401-6598c45a25d2.png">
-
+- Now you have 33.1GB Free space set up that can be partitioned, select it, then press enter.
   
+  <img width="795" alt="Screen Shot 2022-03-13 at 10 39 58 AM" src="https://user-images.githubusercontent.com/51042907/158048401-a4b25d7b-518c-40ae-b401-6598c45a25d2.png">
+
+- Select create new partition, then press enter.
   
 <img width="797" alt="Screen Shot 2022-03-13 at 10 40 22 AM" src="https://user-images.githubusercontent.com/51042907/158048407-271bb323-af7b-43b2-9237-c4c97ac6efd5.png">
 
+- Enter new partition size as shown below, then press continue.
+  
   <img width="796" alt="Screen Shot 2022-03-13 at 10 41 56 AM" src="https://user-images.githubusercontent.com/51042907/158048452-76c38b98-0d77-444c-84be-01703fd8c011.png">
 
+- Select type of new partition as shown below, then press enter.
+  
   <img width="799" alt="Screen Shot 2022-03-13 at 10 52 47 AM" src="https://user-images.githubusercontent.com/51042907/158048756-aa46ab1d-4296-4ebf-843e-756189a0f09c.png">
 
+- Choose whether you want to partition at the end or beginning (select beginning), then press enter.
+  
   <img width="795" alt="Screen Shot 2022-03-13 at 10 53 05 AM" src="https://user-images.githubusercontent.com/51042907/158048768-13b8afe8-610d-464e-96be-e7b528d7f26a.png">
 
+- Now edit the partition settings as shown below, then select "Done setting up the partition" and press enter.(This partition is setting up as boot partition that's why we need to put boot flag on, normally for boot partition ex2 journal file systems are select since they are old and stable.)
   
   <img width="797" alt="Screen Shot 2022-03-13 at 10 54 35 AM" src="https://user-images.githubusercontent.com/51042907/158048812-b9add1f3-e0f8-4ecd-8be5-53eb2447f039.png">
 
-  
+- Now select the remaining free space of 32.6 GB, then press enter.
   
   <img width="791" alt="Screen Shot 2022-03-13 at 10 55 35 AM" src="https://user-images.githubusercontent.com/51042907/158048827-011a58b4-c835-4301-8b42-0716a4891395.png">
 
+- select create new partition, then press enter.
   
   <img width="793" alt="Screen Shot 2022-03-13 at 10 56 08 AM" src="https://user-images.githubusercontent.com/51042907/158048842-12b1001c-a19b-44f3-bd47-211286f0084b.png">
 
-<img width="790" alt="Screen Shot 2022-03-13 at 10 56 29 AM" src="https://user-images.githubusercontent.com/51042907/158048854-f493c582-577f-4efc-8374-ad1c3e876488.png">
-  
-<img width="792" alt="Screen Shot 2022-03-13 at 10 56 44 AM" src="https://user-images.githubusercontent.com/51042907/158048866-b7627fac-7613-4f32-b9ec-d7643ff094c7.png">
-  
-  
-<img width="797" alt="Screen Shot 2022-03-13 at 10 57 19 AM" src="https://user-images.githubusercontent.com/51042907/158048878-74fa3dc7-7a0d-4731-a592-f7a093abb319.png">
+- Enter new partition size (just type "max" as maximum remaining space) as shown below, then press continue.
 
+  <img width="790" alt="Screen Shot 2022-03-13 at 10 56 29 AM" src="https://user-images.githubusercontent.com/51042907/158048854-f493c582-577f-4efc-8374-ad1c3e876488.png">
+  
+- Select type of new partition as shown below, then press enter.
+  
+  <img width="792" alt="Screen Shot 2022-03-13 at 10 56 44 AM" src="https://user-images.githubusercontent.com/51042907/158048866-b7627fac-7613-4f32-b9ec-d7643ff094c7.png">
+  
+- Now edit the partition settings as shown below, then select "Done setting up the partition" and press enter.
+  
+  <img width="797" alt="Screen Shot 2022-03-13 at 10 57 19 AM" src="https://user-images.githubusercontent.com/51042907/158048878-74fa3dc7-7a0d-4731-a592-f7a093abb319.png">
+
+  
+- Now you have boot primary partition and logical partition setup. 
   
   <img width="793" alt="Screen Shot 2022-03-13 at 10 57 47 AM" src="https://user-images.githubusercontent.com/51042907/158048897-7483122f-4be9-44d9-98df-d899c89d78d0.png">
 
   
+- Now select the "Configure the encrypted volume and press enter"
+  
   <img width="796" alt="Screen Shot 2022-03-13 at 10 58 17 AM" src="https://user-images.githubusercontent.com/51042907/158048917-ff548b70-9a1d-401a-8d9b-393c44a83979.png">
 
+- Select yes to write changes to the disk, then press enter.(Don't worry!)
+  
   <img width="801" alt="Screen Shot 2022-03-13 at 10 58 37 AM" src="https://user-images.githubusercontent.com/51042907/158048931-a5d8e4f3-1b5e-46d3-b383-204949bd05db.png">
 
+- Select "Create Encrypted volume", then press enter.
+  
   <img width="795" alt="Screen Shot 2022-03-13 at 10 58 59 AM" src="https://user-images.githubusercontent.com/51042907/158048941-bf443d2f-d979-4d33-8725-f84402358aa4.png">
 
+- Select the partition you want to encrypt by pressing space bar, then select continue then press enter.
+  
   <img width="795" alt="Screen Shot 2022-03-13 at 10 59 22 AM" src="https://user-images.githubusercontent.com/51042907/158048954-9deda06c-0a2d-45b9-a25a-dcbe42959496.png">
 
+- Select the Finish, then press enter. 
+  
   <img width="793" alt="Screen Shot 2022-03-13 at 10 59 47 AM" src="https://user-images.githubusercontent.com/51042907/158048961-806b2252-ea4e-4a82-ba10-765f47e97e66.png">
 
+- Select to yes to erase the partition disk that you are going to encrypt, then press enter.
+  
   <img width="797" alt="Screen Shot 2022-03-13 at 11 00 25 AM" src="https://user-images.githubusercontent.com/51042907/158048994-7f474dbb-d214-40f7-83e0-928dc3fc48cc.png">
   
-<img width="794" alt="Screen Shot 2022-03-13 at 11 00 58 AM" src="https://user-images.githubusercontent.com/51042907/158049007-1abfaab4-b9d2-4a98-a3a8-14a76b43c1a4.png">
+- Wait for few minutes until the data is erased. 
+  
+  <img width="794" alt="Screen Shot 2022-03-13 at 11 00 58 AM" src="https://user-images.githubusercontent.com/51042907/158049007-1abfaab4-b9d2-4a98-a3a8-14a76b43c1a4.png">
