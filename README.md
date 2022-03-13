@@ -445,3 +445,26 @@
 -   <img width="799" alt="Screen Shot 2022-03-13 at 2 26 45 PM" src="https://user-images.githubusercontent.com/51042907/158055269-25a3a830-96cd-4176-83f8-b91cd546a8a5.png">
   
   
+- Select the divice for boot loader installation as shown below, then press enter.
+  
+  
+  
+  <img width="797" alt="Screen Shot 2022-03-13 at 2 30 32 PM" src="https://user-images.githubusercontent.com/51042907/158055421-17192fe0-0c46-44d5-a2e3-64c03db70f63.png">
+  
+  - Your installation is complete. Now you can select continue and enter to boot newly installed virtual machine.
+  
+<img width="791" alt="Screen Shot 2022-03-13 at 2 31 32 PM" src="https://user-images.githubusercontent.com/51042907/158055456-b9e9018f-769c-42c4-8c4c-666ed96efebd.png">
+
+  - Select Debian and press enter.
+  
+  <img width="632" alt="Screen Shot 2022-03-13 at 2 36 46 PM" src="https://user-images.githubusercontent.com/51042907/158055615-d9c455bd-15d0-4776-ab20-f41f651639b1.png">
+  
+  - Enter the passphrase you need.
+  
+  <img width="715" alt="Screen Shot 2022-03-13 at 2 37 06 PM" src="https://user-images.githubusercontent.com/51042907/158055621-368a422b-daf1-4389-8e96-1148f6675a71.png">
+  
+  - run lsblk.
+  
+  <img width="494" alt="Screen Shot 2022-03-13 at 2 36 01 PM" src="https://user-images.githubusercontent.com/51042907/158055597-3cb50784-7e39-4ce9-9147-2b1bdad90623.png">
+
+
