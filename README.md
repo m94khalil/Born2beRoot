@@ -120,7 +120,7 @@
   
   <img width="797" alt="Screen Shot 2022-03-13 at 10 36 01 AM" src="https://user-images.githubusercontent.com/51042907/158048303-1f32919a-76b2-41f9-8df5-611ed9d822cd.png">
 
-- Select yes for creating new partition on the table on this divice, then enter. 
+- Select yes for creating new partition table on this divice, then enter. 
   
   <img width="792" alt="Screen Shot 2022-03-13 at 10 38 56 AM" src="https://user-images.githubusercontent.com/51042907/158048375-f76d0732-88eb-488d-b609-63dd4577de62.png">
 
@@ -202,92 +202,153 @@
   
   <img width="794" alt="Screen Shot 2022-03-13 at 11 00 58 AM" src="https://user-images.githubusercontent.com/51042907/158049007-1abfaab4-b9d2-4a98-a3a8-14a76b43c1a4.png">
 
-
+- Enter the passphrase to do the encryption. (remember this passphrase, since you need to enter it every time starting the virtual machine.
+  
   <img width="797" alt="Screen Shot 2022-03-13 at 12 18 27 PM" src="https://user-images.githubusercontent.com/51042907/158051216-5e011d4e-8a4d-4dc3-9bd7-2ae781061cac.png">
   
-<img width="796" alt="Screen Shot 2022-03-13 at 12 18 56 PM" src="https://user-images.githubusercontent.com/51042907/158051230-78231aed-9ccc-4fc2-a3db-78e647e1fe79.png">
+- Enter the passphrase again to confirm. 
+  
+  <img width="796" alt="Screen Shot 2022-03-13 at 12 18 56 PM" src="https://user-images.githubusercontent.com/51042907/158051230-78231aed-9ccc-4fc2-a3db-78e647e1fe79.png">
   
   
-<img width="800" alt="Screen Shot 2022-03-13 at 12 19 42 PM" src="https://user-images.githubusercontent.com/51042907/158051260-485e1326-4bd2-426a-a53c-eef9aabb145d.png">
+- If you are using a weak passphrase you will be notified as shown below. select yes then press enter. 
+  
+  <img width="800" alt="Screen Shot 2022-03-13 at 12 19 42 PM" src="https://user-images.githubusercontent.com/51042907/158051260-485e1326-4bd2-426a-a53c-eef9aabb145d.png">
 
-<img width="793" alt="Screen Shot 2022-03-13 at 12 20 19 PM" src="https://user-images.githubusercontent.com/51042907/158051276-2a7615b0-7838-4b73-9b02-6e0978a173af.png">
+- Now we are going to configure the logical volume manager for logical partion. select "Configure logical volume manager" and press enter.
   
-<img width="795" alt="Screen Shot 2022-03-13 at 12 20 59 PM" src="https://user-images.githubusercontent.com/51042907/158051290-bddfc104-cb5c-43a9-8cb7-a86c5a4841f0.png">
+  <img width="793" alt="Screen Shot 2022-03-13 at 12 20 19 PM" src="https://user-images.githubusercontent.com/51042907/158051276-2a7615b0-7838-4b73-9b02-6e0978a173af.png">
+  
+- Select yes to confirm. 
+  
+  <img width="795" alt="Screen Shot 2022-03-13 at 12 20 59 PM" src="https://user-images.githubusercontent.com/51042907/158051290-bddfc104-cb5c-43a9-8cb7-a86c5a4841f0.png">
   
   
-<img width="800" alt="Screen Shot 2022-03-13 at 12 21 29 PM" src="https://user-images.githubusercontent.com/51042907/158051313-b322720c-24c9-4282-a81e-beed767ac63c.png">
+- Select "create volume group", then press enter.
   
+  <img width="800" alt="Screen Shot 2022-03-13 at 12 21 29 PM" src="https://user-images.githubusercontent.com/51042907/158051313-b322720c-24c9-4282-a81e-beed767ac63c.png">
   
+- Type the "volume group name" as shown below. Select continue then press enter.
   
   <img width="795" alt="Screen Shot 2022-03-13 at 12 22 27 PM" src="https://user-images.githubusercontent.com/51042907/158051341-91cb42dd-5de5-4245-a324-91cec65d7424.png">
 
-<img width="798" alt="Screen Shot 2022-03-13 at 12 22 54 PM" src="https://user-images.githubusercontent.com/51042907/158051359-ca4bbe95-a644-40d1-8c88-525b6819efa4.png">
+- Select device for the new volume group. (Use spacebar to select the device), then select continue and press enter.
+  
+  <img width="798" alt="Screen Shot 2022-03-13 at 12 22 54 PM" src="https://user-images.githubusercontent.com/51042907/158051359-ca4bbe95-a644-40d1-8c88-525b6819efa4.png">
 
+- Select "create logical volume", then press enter.
+  
   <img width="794" alt="Screen Shot 2022-03-13 at 12 24 38 PM" src="https://user-images.githubusercontent.com/51042907/158051396-57ff4625-c301-4304-a022-a1137c3c1b43.png">
 
+- Select the volume group where new logical volume need to be added then press enter.
+  
   <img width="796" alt="Screen Shot 2022-03-13 at 12 25 00 PM" src="https://user-images.githubusercontent.com/51042907/158051405-c9b19c1c-8591-4689-bcd2-287d07166d92.png">
 
+- Type the name of new logical volume as shown below, then select continue and press enter.
+  
   <img width="797" alt="Screen Shot 2022-03-13 at 12 25 48 PM" src="https://user-images.githubusercontent.com/51042907/158051429-c3d957c6-83a9-4281-8cee-1369f78c97e7.png">
 
+- Type the logical volume size as shown below, then select continue and press enter.
+  
   <img width="788" alt="Screen Shot 2022-03-13 at 12 26 31 PM" src="https://user-images.githubusercontent.com/51042907/158051447-e6b7ce61-5b1f-4e93-bfb8-6d188a599fda.png">
   
   
-<img width="798" alt="Screen Shot 2022-03-13 at 12 27 33 PM" src="https://user-images.githubusercontent.com/51042907/158051475-11f6cd12-fba2-4c42-a31e-961b777681d2.png">
+- Select "create logical volume", then press enter.
+  
+  <img width="798" alt="Screen Shot 2022-03-13 at 12 27 33 PM" src="https://user-images.githubusercontent.com/51042907/158051475-11f6cd12-fba2-4c42-a31e-961b777681d2.png">
 
+- Select the volume group where new logical volume need to be added then press enter.
+  
   <img width="794" alt="Screen Shot 2022-03-13 at 12 27 59 PM" src="https://user-images.githubusercontent.com/51042907/158051486-d358c32d-e335-4d30-8877-7b15a25264f3.png">
 
+- Type the name of new logical volume as shown below, then select continue and press enter.
+  
   <img width="801" alt="Screen Shot 2022-03-13 at 12 28 46 PM" src="https://user-images.githubusercontent.com/51042907/158051515-6988cbf6-2a74-4c51-a89b-3035d2bf6ea1.png">
 
+- Type the logical volume size as shown below, then select continue and press enter.
+  
   <img width="792" alt="Screen Shot 2022-03-13 at 12 29 56 PM" src="https://user-images.githubusercontent.com/51042907/158051545-57431d2e-7a00-4e27-b735-13b099041c26.png">
 
+- Select "create logical volume", then press enter.
+  
   <img width="794" alt="Screen Shot 2022-03-13 at 12 30 26 PM" src="https://user-images.githubusercontent.com/51042907/158051559-355b1b3c-3a4e-4ca3-b853-2b5a17e86176.png">
   
-<img width="786" alt="Screen Shot 2022-03-13 at 12 30 56 PM" src="https://user-images.githubusercontent.com/51042907/158051579-4e43dc67-b76d-465d-9928-e25d7b0b5aed.png">
+- Select the volume group where new logical volume need to be added then press enter.
+  
+  <img width="786" alt="Screen Shot 2022-03-13 at 12 30 56 PM" src="https://user-images.githubusercontent.com/51042907/158051579-4e43dc67-b76d-465d-9928-e25d7b0b5aed.png">
+  
+- Type the name of new logical volume as shown below, then select continue and press enter.
   
   <img width="797" alt="Screen Shot 2022-03-13 at 12 31 30 PM" src="https://user-images.githubusercontent.com/51042907/158051603-7838eb58-45c5-4c67-b3e3-f43c88c6f136.png">
 
+- Type the logical volume size as shown below, then select continue and press enter.
   
 <img width="794" alt="Screen Shot 2022-03-13 at 12 32 21 PM" src="https://user-images.githubusercontent.com/51042907/158051622-9fb8d26c-6f7a-4953-a9b9-86ab6a7c9d3f.png">
 
+- Select "create logical volume", then press enter.
+  
   <img width="797" alt="Screen Shot 2022-03-13 at 12 32 54 PM" src="https://user-images.githubusercontent.com/51042907/158051631-d537c1e0-33cd-4dc9-b186-56d41460516e.png">
 
+- Select the volume group where new logical volume need to be added then press enter.
   
  <img width="798" alt="Screen Shot 2022-03-13 at 12 35 05 PM" src="https://user-images.githubusercontent.com/51042907/158051683-6502bd72-7c4b-4325-a102-a90e5b5c5723.png">
 
+- Type the name of new logical volume as shown below, then select continue and press enter.
+  
   <img width="792" alt="Screen Shot 2022-03-13 at 12 35 56 PM" src="https://user-images.githubusercontent.com/51042907/158051706-5adda8f8-2aed-4898-9fc2-e114072bc7b1.png">
 
+- Type the logical volume size as shown below, then select continue and press enter.
+  
   <img width="796" alt="Screen Shot 2022-03-13 at 12 37 13 PM" src="https://user-images.githubusercontent.com/51042907/158051742-99305de0-dbb9-4c57-aff5-18969588ba32.png">
 
+- Select "create logical volume", then press enter.
+  
   <img width="797" alt="Screen Shot 2022-03-13 at 12 38 04 PM" src="https://user-images.githubusercontent.com/51042907/158051767-cac81c14-17b8-45d4-a6ae-4df54192d8da.png">
   
+- Select the volume group where new logical volume need to be added then press enter.
   
 <img width="797" alt="Screen Shot 2022-03-13 at 12 38 25 PM" src="https://user-images.githubusercontent.com/51042907/158051778-e60170bb-dc29-4756-b0f8-c2853b037b5f.png">
 
-    <img width="796" alt="Screen Shot 2022-03-13 at 12 39 00 PM" src="https://user-images.githubusercontent.com/51042907/158051790-401170fa-a9d5-4fcc-aa7d-15217542f7fc.png">
+- Type the name of new logical volume as shown below, then select continue and press enter.
   
-<img width="794" alt="Screen Shot 2022-03-13 at 12 39 27 PM" src="https://user-images.githubusercontent.com/51042907/158051815-df2fd537-53de-418c-9f52-0e7c9e8ea9ab.png">
+  <img width="796" alt="Screen Shot 2022-03-13 at 12 39 00 PM" src="https://user-images.githubusercontent.com/51042907/158051790-401170fa-a9d5-4fcc-aa7d-15217542f7fc.png">
   
+- Type the logical volume size as shown below, then select continue and press enter.
+  
+  <img width="794" alt="Screen Shot 2022-03-13 at 12 39 27 PM" src="https://user-images.githubusercontent.com/51042907/158051815-df2fd537-53de-418c-9f52-0e7c9e8ea9ab.png">
+  
+- Select "create logical volume", then press enter.
   
   <img width="797" alt="Screen Shot 2022-03-13 at 12 39 58 PM" src="https://user-images.githubusercontent.com/51042907/158051833-74c3a580-26d5-4937-afd0-8c731a6537bc.png">
   
-<img width="795" alt="Screen Shot 2022-03-13 at 12 40 14 PM" src="https://user-images.githubusercontent.com/51042907/158051838-a2b504a4-f864-4b41-9df1-c3e5ca250881.png">
+- Select the volume group where new logical volume need to be added then press enter.
   
- 
+  <img width="795" alt="Screen Shot 2022-03-13 at 12 40 14 PM" src="https://user-images.githubusercontent.com/51042907/158051838-a2b504a4-f864-4b41-9df1-c3e5ca250881.png">
+  
+- Type the name of new logical volume as shown below, then select continue and press enter. 
 
 <img width="792" alt="Screen Shot 2022-03-13 at 12 40 56 PM" src="https://user-images.githubusercontent.com/51042907/158051853-ba060545-7f23-4d67-8815-03a1d650f4ea.png">
   
-<img width="797" alt="Screen Shot 2022-03-13 at 12 41 45 PM" src="https://user-images.githubusercontent.com/51042907/158051885-8c04c78f-a1d6-4b99-9738-94e6222e36cb.png">
+- Type the logical volume size as shown below, then select continue and press enter.
   
+  <img width="797" alt="Screen Shot 2022-03-13 at 12 41 45 PM" src="https://user-images.githubusercontent.com/51042907/158051885-8c04c78f-a1d6-4b99-9738-94e6222e36cb.png">
+  
+- Select "create logical volume", then press enter.
   
 <img width="799" alt="Screen Shot 2022-03-13 at 12 42 20 PM" src="https://user-images.githubusercontent.com/51042907/158051906-29e87419-13c1-4fa9-ace8-8c45a4f36a0c.png">
   
-<img width="793" alt="Screen Shot 2022-03-13 at 12 42 37 PM" src="https://user-images.githubusercontent.com/51042907/158051911-cb69ca44-17b0-402f-905b-89600712c6f6.png">
+- Select the volume group where new logical volume need to be added then press enter.
   
-      
+  <img width="793" alt="Screen Shot 2022-03-13 at 12 42 37 PM" src="https://user-images.githubusercontent.com/51042907/158051911-cb69ca44-17b0-402f-905b-89600712c6f6.png">
+  
+- Type the name of new logical volume as shown below, then select continue and press enter. 
+  
 <img width="799" alt="Screen Shot 2022-03-13 at 12 43 11 PM" src="https://user-images.githubusercontent.com/51042907/158051924-74236361-461f-4ce4-a479-61c2750a5e86.png">
+
+- Type the logical volume size as shown below, then select continue and press enter.
   
 <img width="794" alt="Screen Shot 2022-03-13 at 12 43 56 PM" src="https://user-images.githubusercontent.com/51042907/158051951-108530ab-aa71-4386-8cce-ad7a4fec93e2.png">
-
+  
   <img width="800" alt="Screen Shot 2022-03-13 at 12 44 24 PM" src="https://user-images.githubusercontent.com/51042907/158051962-ea2980ac-2ae9-4c95-8b5c-8fc1a77869cf.png">
   
 <img width="814" alt="Screen Shot 2022-03-13 at 12 45 39 PM" src="https://user-images.githubusercontent.com/51042907/158051995-f546519d-6197-41be-949d-accd308af795.png">
