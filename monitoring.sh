@@ -1,8 +1,8 @@
 #!bin/bash
 
 ## Command substitutions
-ARCH=$(uname -a) # alternatively, "uname -snrvmo"
-PCPU=$(grep -c 'physical id' /proc/cpuinfo) # -c => print count of matching lines
+ARCH=$(uname -a) # alternatively, "uname -snrvmo" The uname tool is most commonly used to determine the processor architecture, the system hostname and the version of the kernel running on the system.
+PCPU=$(grep -c 'physical id' /proc/cpuinfo) # -c => print count of matching lines you can put vendor_id which will also print the same result.
 VCPU=$(grep -c processor /proc/cpuinfo)
 FULLRAM=$(free -m | grep Mem: | awk '{print $2}')
 USEDRAM=$(free -m | grep Mem: | awk '{print $3}')
