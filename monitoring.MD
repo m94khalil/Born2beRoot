@@ -1,10 +1,24 @@
-#!bin/bash
+# Monitoring.sh explanation
 
-## Command substitutions
-ARCH=$(uname -a) # alternatively, "uname -snrvmo" The uname tool is most commonly used to determine the processor architecture, the system hostname and the version of the kernel running on the system.
-PCPU=$(grep -c 'physical id' /proc/cpuinfo) # -c => print count of matching lines you can put vendor_id which will also print the same result.
+# ARCH=$(uname -a)
+<img width="566" alt="Screen Shot 2022-03-15 at 7 19 39 AM" src="https://user-images.githubusercontent.com/51042907/158299403-573b3ad7-3e75-4252-b585-073d5a77369c.png">
+alternatively, "uname -snrvmo" 
+The uname tool is most commonly used to determine the processor architecture,
+the system hostname and the version of the kernel running on the system.
+for more details : https://linuxize.com/post/uname-command-in-linux/#:~:text=The%20uname%20command%20is%20used%20to%20print%20basic%20system%20information,free%20to%20leave%20a%20comment
+
+# PCPU=$(grep -c 'physical id' /proc/cpuinfo) 
+
+the grep -c will return number of times the "physical id" is appear in the file.
+
 VCPU=$(grep -c processor /proc/cpuinfo)
+the grep -c will return number of times the "physical id" is appear in the file.
+
 FULLRAM=$(free -m | grep Mem: | awk '{print $2}')
+free : The free displays the total amount of free and used physical and swap memory in the system, as well as the buffers and caches used by the kernel.
+free --help for more details.
+free -m show output in mebibites.
+
 USEDRAM=$(free -m | grep Mem: | awk '{print $3}')
 PCTRAM=$(free -m | grep Mem: | awk '{printf("%.2f"), $3/$2*100}')
 FULLDISK=$(df -BG | grep /dev/ | grep -v /boot | awk '{fd += $2} END {print fd}') # grep -v means invert match
