@@ -195,6 +195,12 @@ if [ $(lsblk | grep "lvm" | wc -l) -eq 0 ]; then echo no; else echo yes; fi -> T
 
 <img width="746" alt="Screen Shot 2022-03-15 at 12 39 35 PM" src="https://user-images.githubusercontent.com/51042907/158338653-44923d63-d60a-4e3a-bd26-02342fef98e5.png">
 
+- netstat -n : don't resolve names (-n or --numeric)
+
+<img width="696" alt="Screen Shot 2022-03-15 at 1 56 14 PM" src="https://user-images.githubusercontent.com/51042907/158352824-00f7d43a-0337-490f-8684-28e14b4dab09.png">
+
+- netstat -an : In this case i don't see any difference in using netstat -a and netstat -an. 
+
 ## if [ ${TCP} -eq 0 ]; then echo NOT ESTABLISHED; else echo ESTABLISHED; fi
 ## users | wc -w
 - wc -w => counts words
