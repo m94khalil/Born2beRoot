@@ -2,114 +2,160 @@
 
 ## uname -a
 <img width="566" alt="Screen Shot 2022-03-15 at 7 19 39 AM" src="https://user-images.githubusercontent.com/51042907/158299403-573b3ad7-3e75-4252-b585-073d5a77369c.png">
-alternatively, "uname -snrvmo" 
-The uname tool is most commonly used to determine the processor architecture,
-the system hostname and the version of the kernel running on the system.
-for more details : https://linuxize.com/post/uname-command-in-linux/#:~:text=The%20uname%20command%20is%20used%20to%20print%20basic%20system%20information,free%20to%20leave%20a%20comment
+- alternatively, "uname -snrvmo" 
+- The uname tool is most commonly used to determine the processor architecture,
+- The system hostname and the version of the kernel running on the system.
+- For more details : https://linuxize.com/post/uname-command-in-linux/#:~:text=The%20uname%20command%20is%20used%20to%20print%20basic%20system%20information,free%20to%20leave%20a%20comment
 
 
 ## grep -c 'physical id' /proc/cpuinfo
 <img width="1125" alt="Screen Shot 2022-03-15 at 7 28 40 AM" src="https://user-images.githubusercontent.com/51042907/158300403-308f94b6-7203-4147-95c7-02359b6400e9.png">
 
 grep --help for mor details
--c => print count of matching lines
-the grep -c will return number of times the "physical id" is appear in the file /proc/cpuinfo.
+- -c => print count of matching lines
+- The grep -c will return number of times the "physical id" is appear in the file /proc/cpuinfo.
 
 <img width="381" alt="Screen Shot 2022-03-15 at 8 33 19 AM" src="https://user-images.githubusercontent.com/51042907/158307031-66f8158a-991e-4528-bb89-51b871923226.png">
 
 
 ## grep -c processor /proc/cpuinfo
-the grep -c will return number of times the "physical id" is appear in the file.
+- The grep -c will return number of times the "physical id" is appear in the file.
 
 <img width="350" alt="Screen Shot 2022-03-15 at 7 30 46 AM" src="https://user-images.githubusercontent.com/51042907/158300622-b80c5307-f318-4a36-a938-8a94fdb3bb82.png">
 
 
 ## free -m | grep Mem: | awk '{print $2}'
-free : The free displays the total amount of free and used physical and swap memory in the system, as well as the buffers and caches used by the kernel.
-free --help for more details.
-free -m show output in mebibites.
+- free : The free displays the total amount of free and used physical and swap memory in the system, as well as the buffers and caches used by the kernel.
+- free --help for more details.
+- free -m show output in mebibites.
 
 <img width="585" alt="Screen Shot 2022-03-15 at 7 37 51 AM" src="https://user-images.githubusercontent.com/51042907/158301378-a7fa8231-5066-413d-9fee-6af76e610541.png">
 
-free -m | grep Mem: -> when you pipe free -m result into grep Mem: it is going to fetch all the rows which contains Mem:
+- free -m | grep Mem: -> when you pipe free -m result into grep Mem: it is going to fetch all the rows which contains Mem:
 
 <img width="588" alt="Screen Shot 2022-03-15 at 7 40 31 AM" src="https://user-images.githubusercontent.com/51042907/158301655-d82f1a96-2c40-467f-8dac-9cf90e8f2fd7.png">
 
-awk : Awk is a scripting language used for manipulating data and generating reports. The awk command programming language requires no compiling and allows the user to use variables, numeric functions, string functions, and logical operators. 
-awk --help for more details.
-To understand more about "awk" : https://www.geeksforgeeks.org/awk-command-unixlinux-examples/
-free -m | grep Mem: | awk '{print $2}' -> the result of grep will be passed to awk and "print $2" will print the second column.
+- awk : Awk is a scripting language used for manipulating data and generating reports. The awk command programming language requires no compiling and allows the user to use variables, numeric functions, string functions, and logical operators. 
+- awk --help for more details.
+- To understand more about "awk" : https://www.geeksforgeeks.org/awk-command-unixlinux-examples/
+- free -m | grep Mem: | awk '{print $2}' -> the result of grep will be passed to awk and "print $2" will print the second column.
 
 <img width="399" alt="Screen Shot 2022-03-15 at 7 49 04 AM" src="https://user-images.githubusercontent.com/51042907/158302518-d22b0fed-af65-4bcf-a03e-c9f0968b03b3.png">
 
 
 ## free -m | grep Mem: | awk '{print $3}'
-similar to the lase case "print $3" will print the third column.
+- Similar to the lase case "print $3" will print the third column.
 
 <img width="400" alt="Screen Shot 2022-03-15 at 7 56 55 AM" src="https://user-images.githubusercontent.com/51042907/158303329-bf11b40b-8c78-4e6b-8e35-70ebd7ce3c60.png">
 
 
 ## free -m | grep Mem: | awk '{printf("%.2f"), $3/$2*100}'
-In this case awk will print the result of "(column 3 / column 2) * (100)" with two decimal accuracy.
+- In this case awk will print the result of "(column 3 / column 2) * (100)" with two decimal accuracy.
 
 <img width="514" alt="Screen Shot 2022-03-15 at 8 39 21 AM" src="https://user-images.githubusercontent.com/51042907/158307640-61a60dd9-37f0-47ff-b560-5749e9c96c40.png">
 
 
 ## df -BG | grep /dev/ | grep -v /boot | awk '{fd += $2} END {print fd}'
-df : The ‘df‘ command stands for “disk filesystem“, it is used to get a full summary of disk space usage of the file system on the Linux system.
-for more details: "df --help" also : https://www.geeksforgeeks.org/df-command-in-linux-with-examples/
-df -BG : It will show full summary of disk space usage of the file system on the Linux system which is scaled in Giga bytes.
+- df : The ‘df‘ command stands for “disk filesystem“, it is used to get a full summary of disk space usage of the file system on the Linux system.
+- For more details: "df --help" also : https://www.geeksforgeeks.org/df-command-in-linux-with-examples/
+- df -BG : It will show full summary of disk space usage of the file system on the Linux system which is scaled in Giga bytes.
 
 <img width="555" alt="Screen Shot 2022-03-15 at 8 50 01 AM" src="https://user-images.githubusercontent.com/51042907/158308675-4349571e-d59c-4b9b-b16f-e1ba716f3aa2.png">
 
-df -BG | grep /dev/ : The result of "df -BG" will be piped into grep command which will fetch all the rows with "/dev/" is present.
+- df -BG | grep /dev/ : The result of "df -BG" will be piped into grep command which will fetch all the rows with "/dev/" is present.
 
 <img width="638" alt="Screen Shot 2022-03-15 at 8 55 23 AM" src="https://user-images.githubusercontent.com/51042907/158309220-b5298bec-a9e9-4335-9ac8-3d9b0b9ea9e7.png">
 
-df -BG | grep /dev/ | grep -v /boot : The result of first grep (you can see it in the above figure) will be piped into "grep -v /boot" and it will fetch every row that does not have /boot present in it.
+- df -BG | grep /dev/ | grep -v /boot : The result of first grep (you can see it in the above figure) will be piped into "grep -v /boot" and it will fetch every row that does not have /boot present in it.
 
 <img width="606" alt="Screen Shot 2022-03-15 at 8 59 51 AM" src="https://user-images.githubusercontent.com/51042907/158309700-a924fd46-3b36-4ff5-bd52-f17fc88e7494.png">
 
-df -BG | grep /dev/ | grep -v /boot | awk '{fd += $2} END {print fd}' : The result of the second grep (you can see it in the above figure) will be piped into awk and it have two statements the first statement "fd += $2" which will sum over each row in the second column and the second statement "print fd" will print the result of summation.
+- df -BG | grep /dev/ | grep -v /boot | awk '{fd += $2} END {print fd}' : The result of the second grep (you can see it in the above figure) will be piped into awk and it have two statements the first statement "fd += $2" which will sum over each row in the second column and the second statement "print fd" will print the result of summation.
 
 <img width="662" alt="Screen Shot 2022-03-15 at 9 07 00 AM" src="https://user-images.githubusercontent.com/51042907/158310506-388c8357-5f43-426d-91dc-d15fd51747b8.png">
 
 
 ## df -BM | grep /dev/ | grep -v /boot | awk '{ud += $3} END {print ud}'
-df -BM : It will show full summary of disk space usage of the file system on the Linux system which is scaled in Mega bytes.
+- df -BM : It will show full summary of disk space usage of the file system on the Linux system which is scaled in Mega bytes.
 
 <img width="591" alt="Screen Shot 2022-03-15 at 9 10 41 AM" src="https://user-images.githubusercontent.com/51042907/158310859-21d4cde8-563b-4c00-ba55-174d0e46bad5.png">
 
-df -BM | grep /dev/ : The result of "df -BM" will be piped into grep command which will fetch all the rows with "/dev/" is present.
+- df -BM | grep /dev/ : The result of "df -BM" will be piped into grep command which will fetch all the rows with "/dev/" is present.
 
 <img width="545" alt="Screen Shot 2022-03-15 at 9 53 29 AM" src="https://user-images.githubusercontent.com/51042907/158315654-924a54cb-41dc-4527-af30-8ef98c4bff21.png">
 
-df -BM | grep /dev/ | grep -v /boot : The result of first grep (you can see it in the above figure) will be piped into "grep -v /boot" and it will fetch every row that does not have /boot present in it.
+- df -BM | grep /dev/ | grep -v /boot : The result of first grep (you can see it in the above figure) will be piped into "grep -v /boot" and it will fetch every row that does not have /boot present in it.
 
 <img width="579" alt="Screen Shot 2022-03-15 at 9 55 23 AM" src="https://user-images.githubusercontent.com/51042907/158315888-0099d2aa-6b04-493b-8a49-ad973c277004.png">
 
-df -BM | grep /dev/ | grep -v /boot | awk '{fd += $3} END {print fd}' : The result of the second grep (you can see it in the above figure) will be piped into awk and it have two statements the first statement "fd += $3" which will sum over each row in the third column and the second statement "print fd" will print the result of summation.
+- df -BM | grep /dev/ | grep -v /boot | awk '{fd += $3} END {print fd}' : The result of the second grep (you can see it in the above figure) will be piped into awk and it have two statements the first statement "fd += $3" which will sum over each row in the third column and the second statement "print fd" will print the result of summation.
 
 <img width="623" alt="Screen Shot 2022-03-15 at 9 58 21 AM" src="https://user-images.githubusercontent.com/51042907/158316280-70147fb6-8b19-430d-b6f0-8aa739fccadf.png">
 
 
 ## df -Bm | grep /dev/ | grep -v /boot | awk '{ud += $3} {fd += $2} END {printf("%d"), ud/fd*100}'
-The above set of command is similar to the above command except for the awk part her we have three statements. The first command "ud += $3" will get sum over each row in third column and store it in ud. The second command "fd += $2" will get sum over each row in second column and store it in fd. The third command "printf("%d"), (ud/fd)*100" will print the result of "(ud/fd)*100".
+- The above set of command is similar to the above command except for the awk part her we have three statements. The first command "ud += $3" will get sum over each row in third column and store it in ud. The second command "fd += $2" will get sum over each row in second column and store it in fd. The third command "printf("%d"), (ud/fd)*100" will print the result of "(ud/fd)*100".
 
 <img width="784" alt="Screen Shot 2022-03-15 at 10 09 48 AM" src="https://user-images.githubusercontent.com/51042907/158317585-3b20f908-80b9-4625-a644-08f369bbd9f3.png">
 
 
 ## top -bn1 | grep '^%Cpu' | cut -c 9- | xargs | awk '{printf("%.1f%%"), $1 + $3}'
 
+- top : This starts up an interactive command line application, similar to one in the screenshot below. The upper half of the output contains statistics on processes and resource usage, while the lower half contains a list of the currently running processes. You can use the arrow keys and Page Up/Down keys to browse through the list. If you want to quit, simply press “q”. For more details : https://phoenixnap.com/kb/top-command-in-linux#:~:text=The%20top%20(table%20of%20processes,the%20top%20command%20in%20Linux
 
-LASTBOOT=$(who -b | awk '$1 == "system" {print $3 " " $4}')
-LVM=$(if [ $(lsblk | grep "lvm" | wc -l) -eq 0 ]; then echo no; else echo yes; fi)
-TCP=$(netstat -an | grep ESTABLISHED | wc -l) # display connection for TCP
-TCPMSSG=$(if [ ${TCP} -eq 0 ]; then echo NOT ESTABLISHED; else echo ESTABLISHED; fi)
-USERLOG=$(users | wc -w) # wc -w => counts words
-IP=$(hostname -I)
-MAC=$(ip link show | awk '$1 == "link/ether" {print $2}')
-SUDO=$(journalctl _COMM=sudo | grep COMMAND | wc -l)
+<img width="1005" alt="Screen Shot 2022-03-15 at 10 23 36 AM" src="https://user-images.githubusercontent.com/51042907/158319273-1de0f37b-7a9a-4816-a960-02e14048eb8a.png">
+
+- top -b : Starts top in batch mode, allowing to send the command's output, runs until killed or until it reaches the specified iteration limit. it refresh the above list and adds a updated version into the terminal every second or two.
+
+- top -bn1 : Specify the maximum number of iterations you want top to produce before ending. here it will iterate only once since n is one.
+
+<img width="735" alt="Screen Shot 2022-03-15 at 10 33 50 AM" src="https://user-images.githubusercontent.com/51042907/158320492-b438eac8-b458-447c-acee-0085624b862c.png">
+
+- cut : Print selected parts of lines from each FILE to standard output. 
+- for example: consider you have a file foo.txt 
+
+<img width="89" alt="Screen Shot 2022-03-15 at 10 43 43 AM" src="https://user-images.githubusercontent.com/51042907/158321758-32928ff8-9e4d-4474-99a2-6ebb96b9d399.png">
+
+- Now let's fetch the row with 9 present in it with grep command. 
+
+<img width="228" alt="Screen Shot 2022-03-15 at 10 50 30 AM" src="https://user-images.githubusercontent.com/51042907/158322584-defb7bfe-a6ab-4f35-91e9-3434a16755ee.png">
+
+- Now cut the row from the third character onwards and get the result.
+
+<img width="333" alt="Screen Shot 2022-03-15 at 10 53 00 AM" src="https://user-images.githubusercontent.com/51042907/158322885-6c307e38-1f12-45b3-807b-abe2b6350aba.png">
+
+- for more details : cut --help
+
+- top -bn1 | grep '^%Cpu' : The results "top -bn1" as shown in the above figure will be passed into the "grep '^%Cpu'" where it fetch every row that contain "%Cpu".
+
+<img width="612" alt="Screen Shot 2022-03-15 at 10 36 55 AM" src="https://user-images.githubusercontent.com/51042907/158320867-f09effb6-5728-4ebe-9065-025ebf337bc6.png">
+
+- top -bn1 | grep '^%Cpu' | cut -c 9- : Similarly in our case we are going to cut the grep result from the 9th character onwards to the end of the row, and get the cut out part as result. 
+
+<img width="521" alt="Screen Shot 2022-03-15 at 10 57 25 AM" src="https://user-images.githubusercontent.com/51042907/158323398-f7404ad5-60ba-4018-b033-f7eaffe265bf.png">
+
+- xargs : The xargs command is used in a UNIX shell to convert input from standard input into arguments to a command. In other words, through the use of xargs the output of a command is used as the input of another command. For more details : https://flaviocopes.com/linux-command-xargs/#:~:text=The%20xargs%20command%20is%20used,the%20input%20of%20another%20command.&text=We%20use%20a%20pipe%20(%20%7C%20),pass%20the%20output%20to%20xargs%20
+
+- top -bnl | grep '^%Cpu' | cut -c 9- | xargs : The output of cut command will be used xargs to convert it into arguement of the next command.
+
+<img width="511" alt="Screen Shot 2022-03-15 at 11 12 38 AM" src="https://user-images.githubusercontent.com/51042907/158325374-54d1b839-fb6d-45f7-af8a-47c42b9af09c.png">
+
+- top -bnl | grep '^%Cpu' | cut -c 9- | xargs | awk '{printf"%.1f%%"), $1 + $3}' : I don't know why there xargs but it works fine without xargs also. Anyway what it will do is the awk command receive arguement from xargs and print the sum of column one and column three and print the result with single decimal accuracy.
+
+<img width="858" alt="Screen Shot 2022-03-15 at 11 26 01 AM" src="https://user-images.githubusercontent.com/51042907/158327325-8e69b43d-e7f2-4d97-8c34-ab9093082d11.png">
+
+## who -b | awk '$1 == "system" {print $3 " " $4}'
+## if [ $(lsblk | grep "lvm" | wc -l) -eq 0 ]; then echo no; else echo yes; fi
+## netstat -an | grep ESTABLISHED | wc -l
+- display connection for TCP
+## if [ ${TCP} -eq 0 ]; then echo NOT ESTABLISHED; else echo ESTABLISHED; fi
+## users | wc -w
+- wc -w => counts words
+## hostname -I 
+## ip link show | awk '$1 == "link/ether" {print $2}' 
+## journalctl _COMM=sudo | grep COMMAND | wc -l
+
+# The following echo commands will printout the result will printout the result as we wanted.
 
 ## Shows the architecture of the operating system and its kernel version
 echo "#Architecture: ${ARCH}"
