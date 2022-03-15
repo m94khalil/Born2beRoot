@@ -145,9 +145,56 @@ grep --help for mor details
 <img width="858" alt="Screen Shot 2022-03-15 at 11 26 01 AM" src="https://user-images.githubusercontent.com/51042907/158327325-8e69b43d-e7f2-4d97-8c34-ab9093082d11.png">
 
 ## who -b | awk '$1 == "system" {print $3 " " $4}'
+
+who : who is a command-line utility that prints a list of currently logged in users. It can also show the current run level, time of the last system boot, and more.
+
+<img width="368" alt="Screen Shot 2022-03-15 at 11 58 50 AM" src="https://user-images.githubusercontent.com/51042907/158332038-57394434-fcea-48d6-b983-a6e692f488a8.png">
+
+
+who -b : The -b, --boot option tells who to print the time of last system boot, for more details -> who --help. https://linuxize.com/post/who-command-in-linux/#:~:text=who%20is%20a%20command-line,last%20system%20boot%2C%20and%20more
+
+<img width="299" alt="Screen Shot 2022-03-15 at 11 59 33 AM" src="https://user-images.githubusercontent.com/51042907/158332123-4e4e7473-80ce-4c34-9ab3-ebb13f302688.png">
+
+who -b | awk '$1 == "system" {print $3 " " $4}' : here the results of "who -b" is piped to awk command as arguement, the awk will check column one is equal to system if that is true it will print column 3 and column 4.
+
+<img width="469" alt="Screen Shot 2022-03-15 at 12 07 15 PM" src="https://user-images.githubusercontent.com/51042907/158333265-a76638f4-d86d-4b0b-a6fc-04574075f862.png">
+
+- who -b| xargs | cut -c 13-30 : this one is giving me the same result as above i think the below one can also be used. But i don't know for sure.
+
+<img width="341" alt="Screen Shot 2022-03-15 at 12 08 26 PM" src="https://user-images.githubusercontent.com/51042907/158333411-cac6088d-7b15-41c6-894b-78c04539c241.png">
+
 ## if [ $(lsblk | grep "lvm" | wc -l) -eq 0 ]; then echo no; else echo yes; fi
+
+- lsblk : This list information about block devices. For more details : lsblk --help.
+
+<img width="547" alt="Screen Shot 2022-03-15 at 12 11 38 PM" src="https://user-images.githubusercontent.com/51042907/158333931-7beebd44-0b32-4e6a-adbf-b625f936da3c.png">
+
+- lsblk | grep "lvm" : The result "lsblk" will be piped into grep as arguement, then grep will fetch the rows with "lvm" as word and shows the results.
+
+<img width="437" alt="Screen Shot 2022-03-15 at 12 17 24 PM" src="https://user-images.githubusercontent.com/51042907/158334884-9cbcec42-9b4f-400a-9ab5-a83f46c2a13f.png">
+
+- wc : wc stands for word count. As the name implies, it is mainly used for counting purpose. It is used to find out number of lines, word count, byte and characters count in the files specified in the file arguments. For more details : wc --help, https://www.geeksforgeeks.org/wc-command-linux-examples/
+
+- wc -l : return the number of lines in the input arguement.
+
+lsblk | grep "lvm" | wc -l : The result of grep will be passed to "wc -l" which will count the number of lines in the input arguement
+
+<img width="324" alt="Screen Shot 2022-03-15 at 12 27 44 PM" src="https://user-images.githubusercontent.com/51042907/158336715-a1857c0b-c756-4171-8acd-89e8218ce5d4.png">
+
+if [ $(lsblk | grep "lvm" | wc -l) -eq 0 ]; then echo no; else echo yes; fi -> This will print "no" if the word count is equal to zero otherwise it will print "yes".
+
+<img width="695" alt="Screen Shot 2022-03-15 at 12 30 38 PM" src="https://user-images.githubusercontent.com/51042907/158337262-088f5c62-df00-4115-af56-ff277216c969.png">
+
 ## netstat -an | grep ESTABLISHED | wc -l
 - display connection for TCP
+- netstat : Netstat command displays various network related information such as network connections, routing tables, interface statistics, masquerade connections, multicast memberships etc., for more details : https://www.geeksforgeeks.org/netstat-command-linux/
+
+<img width="678" alt="Screen Shot 2022-03-15 at 12 36 32 PM" src="https://user-images.githubusercontent.com/51042907/158338147-c7bc1b9a-2d99-4dc0-807b-2b2312dca867.png">
+
+- netstat -a : Show both listening and non-listening sockets. (-a or -all)
+
+<img width="746" alt="Screen Shot 2022-03-15 at 12 39 35 PM" src="https://user-images.githubusercontent.com/51042907/158338653-44923d63-d60a-4e3a-bd26-02342fef98e5.png">
+
 ## if [ ${TCP} -eq 0 ]; then echo NOT ESTABLISHED; else echo ESTABLISHED; fi
 ## users | wc -w
 - wc -w => counts words
@@ -155,7 +202,7 @@ grep --help for mor details
 ## ip link show | awk '$1 == "link/ether" {print $2}' 
 ## journalctl _COMM=sudo | grep COMMAND | wc -l
 
-# The following echo commands will printout the result will printout the result as we wanted.
+# The following echo commands will printout the result as we wanted.
 
 ## Shows the architecture of the operating system and its kernel version
 echo "#Architecture: ${ARCH}"
