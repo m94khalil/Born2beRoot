@@ -1,20 +1,27 @@
 # Monitoring.sh explanation
 
-# ARCH=$(uname -a)
+## ARCH=$(uname -a)
 <img width="566" alt="Screen Shot 2022-03-15 at 7 19 39 AM" src="https://user-images.githubusercontent.com/51042907/158299403-573b3ad7-3e75-4252-b585-073d5a77369c.png">
 alternatively, "uname -snrvmo" 
 The uname tool is most commonly used to determine the processor architecture,
 the system hostname and the version of the kernel running on the system.
 for more details : https://linuxize.com/post/uname-command-in-linux/#:~:text=The%20uname%20command%20is%20used%20to%20print%20basic%20system%20information,free%20to%20leave%20a%20comment
 
-# PCPU=$(grep -c 'physical id' /proc/cpuinfo) 
 
+## PCPU=$(grep -c 'physical id' /proc/cpuinfo)
+<img width="1125" alt="Screen Shot 2022-03-15 at 7 28 40 AM" src="https://user-images.githubusercontent.com/51042907/158300403-308f94b6-7203-4147-95c7-02359b6400e9.png">
+grep --help for mor details
+-c => print count of matching lines
+the grep -c will return number of times the "physical id" is appear in the file /proc/cpuinfo.
+![Screen Shot 2022-03-15 at 7 29 46 AM](https://user-images.githubusercontent.com/51042907/158300506-9c8cda42-d7ec-4400-b94b-1d31a36adef6.png)
+
+
+## VCPU=$(grep -c processor /proc/cpuinfo)
 the grep -c will return number of times the "physical id" is appear in the file.
+<img width="350" alt="Screen Shot 2022-03-15 at 7 30 46 AM" src="https://user-images.githubusercontent.com/51042907/158300622-b80c5307-f318-4a36-a938-8a94fdb3bb82.png">
 
-VCPU=$(grep -c processor /proc/cpuinfo)
-the grep -c will return number of times the "physical id" is appear in the file.
 
-FULLRAM=$(free -m | grep Mem: | awk '{print $2}')
+## FULLRAM=$(free -m | grep Mem: | awk '{print $2}')
 free : The free displays the total amount of free and used physical and swap memory in the system, as well as the buffers and caches used by the kernel.
 free --help for more details.
 free -m show output in mebibites.
