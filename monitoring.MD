@@ -25,8 +25,19 @@ the grep -c will return number of times the "physical id" is appear in the file.
 free : The free displays the total amount of free and used physical and swap memory in the system, as well as the buffers and caches used by the kernel.
 free --help for more details.
 free -m show output in mebibites.
+<img width="585" alt="Screen Shot 2022-03-15 at 7 37 51 AM" src="https://user-images.githubusercontent.com/51042907/158301378-a7fa8231-5066-413d-9fee-6af76e610541.png">
+free -m | grep Mem: -> when you pipe free -m result into grep Mem: it is going to fetch all the rows which contains Mem:
+<img width="588" alt="Screen Shot 2022-03-15 at 7 40 31 AM" src="https://user-images.githubusercontent.com/51042907/158301655-d82f1a96-2c40-467f-8dac-9cf90e8f2fd7.png">
+awk : Awk is a scripting language used for manipulating data and generating reports. The awk command programming language requires no compiling and allows the user to use variables, numeric functions, string functions, and logical operators. 
+awk --help for more details.
+To understand more about "awk" : https://www.geeksforgeeks.org/awk-command-unixlinux-examples/
+free -m | grep Mem: | awk '{print $2}' -> the result of grep will be passed to awk and "print $2" will print the second column.
+<img width="399" alt="Screen Shot 2022-03-15 at 7 49 04 AM" src="https://user-images.githubusercontent.com/51042907/158302518-d22b0fed-af65-4bcf-a03e-c9f0968b03b3.png">
 
-USEDRAM=$(free -m | grep Mem: | awk '{print $3}')
+## USEDRAM=$(free -m | grep Mem: | awk '{print $3}')
+similar to the lase case "print $3" will print the third column.
+<img width="400" alt="Screen Shot 2022-03-15 at 7 56 55 AM" src="https://user-images.githubusercontent.com/51042907/158303329-bf11b40b-8c78-4e6b-8e35-70ebd7ce3c60.png">
+
 PCTRAM=$(free -m | grep Mem: | awk '{printf("%.2f"), $3/$2*100}')
 FULLDISK=$(df -BG | grep /dev/ | grep -v /boot | awk '{fd += $2} END {print fd}') # grep -v means invert match
 USEDDISK=$(df -BM | grep /dev/ | grep -v /boot | awk '{ud += $3} END {print ud}')
