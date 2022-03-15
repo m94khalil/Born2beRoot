@@ -1,6 +1,6 @@
 # Monitoring.sh explanation
 
-## ARCH=$(uname -a)
+## uname -a
 <img width="566" alt="Screen Shot 2022-03-15 at 7 19 39 AM" src="https://user-images.githubusercontent.com/51042907/158299403-573b3ad7-3e75-4252-b585-073d5a77369c.png">
 alternatively, "uname -snrvmo" 
 The uname tool is most commonly used to determine the processor architecture,
@@ -8,41 +8,100 @@ the system hostname and the version of the kernel running on the system.
 for more details : https://linuxize.com/post/uname-command-in-linux/#:~:text=The%20uname%20command%20is%20used%20to%20print%20basic%20system%20information,free%20to%20leave%20a%20comment
 
 
-## PCPU=$(grep -c 'physical id' /proc/cpuinfo)
+## grep -c 'physical id' /proc/cpuinfo
 <img width="1125" alt="Screen Shot 2022-03-15 at 7 28 40 AM" src="https://user-images.githubusercontent.com/51042907/158300403-308f94b6-7203-4147-95c7-02359b6400e9.png">
+
 grep --help for mor details
 -c => print count of matching lines
 the grep -c will return number of times the "physical id" is appear in the file /proc/cpuinfo.
-![Screen Shot 2022-03-15 at 7 29 46 AM](https://user-images.githubusercontent.com/51042907/158300506-9c8cda42-d7ec-4400-b94b-1d31a36adef6.png)
+
+<img width="381" alt="Screen Shot 2022-03-15 at 8 33 19 AM" src="https://user-images.githubusercontent.com/51042907/158307031-66f8158a-991e-4528-bb89-51b871923226.png">
 
 
-## VCPU=$(grep -c processor /proc/cpuinfo)
+## grep -c processor /proc/cpuinfo
 the grep -c will return number of times the "physical id" is appear in the file.
+
 <img width="350" alt="Screen Shot 2022-03-15 at 7 30 46 AM" src="https://user-images.githubusercontent.com/51042907/158300622-b80c5307-f318-4a36-a938-8a94fdb3bb82.png">
 
 
-## FULLRAM=$(free -m | grep Mem: | awk '{print $2}')
+## free -m | grep Mem: | awk '{print $2}'
 free : The free displays the total amount of free and used physical and swap memory in the system, as well as the buffers and caches used by the kernel.
 free --help for more details.
 free -m show output in mebibites.
+
 <img width="585" alt="Screen Shot 2022-03-15 at 7 37 51 AM" src="https://user-images.githubusercontent.com/51042907/158301378-a7fa8231-5066-413d-9fee-6af76e610541.png">
+
 free -m | grep Mem: -> when you pipe free -m result into grep Mem: it is going to fetch all the rows which contains Mem:
+
 <img width="588" alt="Screen Shot 2022-03-15 at 7 40 31 AM" src="https://user-images.githubusercontent.com/51042907/158301655-d82f1a96-2c40-467f-8dac-9cf90e8f2fd7.png">
+
 awk : Awk is a scripting language used for manipulating data and generating reports. The awk command programming language requires no compiling and allows the user to use variables, numeric functions, string functions, and logical operators. 
 awk --help for more details.
 To understand more about "awk" : https://www.geeksforgeeks.org/awk-command-unixlinux-examples/
 free -m | grep Mem: | awk '{print $2}' -> the result of grep will be passed to awk and "print $2" will print the second column.
+
 <img width="399" alt="Screen Shot 2022-03-15 at 7 49 04 AM" src="https://user-images.githubusercontent.com/51042907/158302518-d22b0fed-af65-4bcf-a03e-c9f0968b03b3.png">
 
-## USEDRAM=$(free -m | grep Mem: | awk '{print $3}')
+
+## free -m | grep Mem: | awk '{print $3}'
 similar to the lase case "print $3" will print the third column.
+
 <img width="400" alt="Screen Shot 2022-03-15 at 7 56 55 AM" src="https://user-images.githubusercontent.com/51042907/158303329-bf11b40b-8c78-4e6b-8e35-70ebd7ce3c60.png">
 
-PCTRAM=$(free -m | grep Mem: | awk '{printf("%.2f"), $3/$2*100}')
-FULLDISK=$(df -BG | grep /dev/ | grep -v /boot | awk '{fd += $2} END {print fd}') # grep -v means invert match
-USEDDISK=$(df -BM | grep /dev/ | grep -v /boot | awk '{ud += $3} END {print ud}')
-PCTDISK=$(df -Bm | grep /dev/ | grep -v /boot | awk '{ud += $3} {fd += $2} END {printf("%d"), ud/fd*100}')
-CPU=$(top -bn1 | grep '^%Cpu' | cut -c 9- | xargs | awk '{printf("%.1f%%"), $1 + $3}')
+
+## free -m | grep Mem: | awk '{printf("%.2f"), $3/$2*100}'
+In this case awk will print the result of "(column 3 / column 2) * (100)" with two decimal accuracy.
+
+<img width="514" alt="Screen Shot 2022-03-15 at 8 39 21 AM" src="https://user-images.githubusercontent.com/51042907/158307640-61a60dd9-37f0-47ff-b560-5749e9c96c40.png">
+
+
+## df -BG | grep /dev/ | grep -v /boot | awk '{fd += $2} END {print fd}'
+df : The ‘df‘ command stands for “disk filesystem“, it is used to get a full summary of disk space usage of the file system on the Linux system.
+for more details: "df --help" also : https://www.geeksforgeeks.org/df-command-in-linux-with-examples/
+df -BG : It will show full summary of disk space usage of the file system on the Linux system which is scaled in Giga bytes.
+
+<img width="555" alt="Screen Shot 2022-03-15 at 8 50 01 AM" src="https://user-images.githubusercontent.com/51042907/158308675-4349571e-d59c-4b9b-b16f-e1ba716f3aa2.png">
+
+df -BG | grep /dev/ : The result of "df -BG" will be piped into grep command which will fetch all the rows with "/dev/" is present.
+
+<img width="638" alt="Screen Shot 2022-03-15 at 8 55 23 AM" src="https://user-images.githubusercontent.com/51042907/158309220-b5298bec-a9e9-4335-9ac8-3d9b0b9ea9e7.png">
+
+df -BG | grep /dev/ | grep -v /boot : The result of first grep (you can see it in the above figure) will be piped into "grep -v /boot" and it will fetch every row that does not have /boot present in it.
+
+<img width="606" alt="Screen Shot 2022-03-15 at 8 59 51 AM" src="https://user-images.githubusercontent.com/51042907/158309700-a924fd46-3b36-4ff5-bd52-f17fc88e7494.png">
+
+df -BG | grep /dev/ | grep -v /boot | awk '{fd += $2} END {print fd}' : The result of the second grep (you can see it in the above figure) will be piped into awk and it have two statements the first statement "fd += $2" which will sum over each row in the second column and the second statement "print fd" will print the result of summation.
+
+<img width="662" alt="Screen Shot 2022-03-15 at 9 07 00 AM" src="https://user-images.githubusercontent.com/51042907/158310506-388c8357-5f43-426d-91dc-d15fd51747b8.png">
+
+
+## df -BM | grep /dev/ | grep -v /boot | awk '{ud += $3} END {print ud}'
+df -BM : It will show full summary of disk space usage of the file system on the Linux system which is scaled in Mega bytes.
+
+<img width="591" alt="Screen Shot 2022-03-15 at 9 10 41 AM" src="https://user-images.githubusercontent.com/51042907/158310859-21d4cde8-563b-4c00-ba55-174d0e46bad5.png">
+
+df -BM | grep /dev/ : The result of "df -BM" will be piped into grep command which will fetch all the rows with "/dev/" is present.
+
+<img width="545" alt="Screen Shot 2022-03-15 at 9 53 29 AM" src="https://user-images.githubusercontent.com/51042907/158315654-924a54cb-41dc-4527-af30-8ef98c4bff21.png">
+
+df -BM | grep /dev/ | grep -v /boot : The result of first grep (you can see it in the above figure) will be piped into "grep -v /boot" and it will fetch every row that does not have /boot present in it.
+
+<img width="579" alt="Screen Shot 2022-03-15 at 9 55 23 AM" src="https://user-images.githubusercontent.com/51042907/158315888-0099d2aa-6b04-493b-8a49-ad973c277004.png">
+
+df -BM | grep /dev/ | grep -v /boot | awk '{fd += $3} END {print fd}' : The result of the second grep (you can see it in the above figure) will be piped into awk and it have two statements the first statement "fd += $3" which will sum over each row in the third column and the second statement "print fd" will print the result of summation.
+
+<img width="623" alt="Screen Shot 2022-03-15 at 9 58 21 AM" src="https://user-images.githubusercontent.com/51042907/158316280-70147fb6-8b19-430d-b6f0-8aa739fccadf.png">
+
+
+## df -Bm | grep /dev/ | grep -v /boot | awk '{ud += $3} {fd += $2} END {printf("%d"), ud/fd*100}'
+The above set of command is similar to the above command except for the awk part her we have three statements. The first command "ud += $3" will get sum over each row in third column and store it in ud. The second command "fd += $2" will get sum over each row in second column and store it in fd. The third command "printf("%d"), (ud/fd)*100" will print the result of "(ud/fd)*100".
+
+<img width="784" alt="Screen Shot 2022-03-15 at 10 09 48 AM" src="https://user-images.githubusercontent.com/51042907/158317585-3b20f908-80b9-4625-a644-08f369bbd9f3.png">
+
+
+## top -bn1 | grep '^%Cpu' | cut -c 9- | xargs | awk '{printf("%.1f%%"), $1 + $3}'
+
+
 LASTBOOT=$(who -b | awk '$1 == "system" {print $3 " " $4}')
 LVM=$(if [ $(lsblk | grep "lvm" | wc -l) -eq 0 ]; then echo no; else echo yes; fi)
 TCP=$(netstat -an | grep ESTABLISHED | wc -l) # display connection for TCP
