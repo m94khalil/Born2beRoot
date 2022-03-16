@@ -2,7 +2,6 @@
 
 ## uname -a
 <img width="566" alt="Screen Shot 2022-03-15 at 7 19 39 AM" src="https://user-images.githubusercontent.com/51042907/158299403-573b3ad7-3e75-4252-b585-073d5a77369c.png">
-- alternatively, "uname -snrvmo" 
 - The uname tool is most commonly used to determine the processor architecture,
 - The system hostname and the version of the kernel running on the system.
 - For more details : https://linuxize.com/post/uname-command-in-linux/#:~:text=The%20uname%20command%20is%20used%20to%20print%20basic%20system%20information,free%20to%20leave%20a%20comment
