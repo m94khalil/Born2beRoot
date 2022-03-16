@@ -200,10 +200,48 @@ if [ $(lsblk | grep "lvm" | wc -l) -eq 0 ]; then echo no; else echo yes; fi -> T
 <img width="696" alt="Screen Shot 2022-03-15 at 1 56 14 PM" src="https://user-images.githubusercontent.com/51042907/158352824-00f7d43a-0337-490f-8684-28e14b4dab09.png">
 
 - netstat -an : In this case i don't see any difference in using netstat -a and netstat -an. 
+- netstat -an | grep ESTABLISHED : "netstat -an" result will be piped to grep and it will fetch the row with "ESTABLISHED" present on it.
+
+<img width="598" alt="Screen Shot 2022-03-16 at 10 09 34 AM" src="https://user-images.githubusercontent.com/51042907/158527388-11b75373-5b0f-4eab-9e92-55c5ed1764e3.png">
+
+- netstat -an | grep ESTABLISHED | wc -l : The result of grep will be piped to "wc -l" command which will show you how many lines are there in grep.
+
+<img width="457" alt="Screen Shot 2022-03-16 at 10 13 38 AM" src="https://user-images.githubusercontent.com/51042907/158527876-47d6112b-5fc5-4335-8873-1c947e34d3be.png">
 
 ## if [ ${TCP} -eq 0 ]; then echo NOT ESTABLISHED; else echo ESTABLISHED; fi
+- if there is a tcp connection established it will echo ESTABLISHED AND if there is no connection established it will echo NOT ESTABLISHED.
+
 ## users | wc -w
-- wc -w => counts words
+- users command will give you the current logged in user name.
+
+<img width="174" alt="Screen Shot 2022-03-16 at 10 17 47 AM" src="https://user-images.githubusercontent.com/51042907/158528415-369b7edc-9fb3-4f47-8bfe-a6c987a5fdad.png">
+
+- users | wc -w : result of the users command will be passed to "wc -w" command which will count the number of words.
+
+<img width="230" alt="Screen Shot 2022-03-16 at 10 19 55 AM" src="https://user-images.githubusercontent.com/51042907/158528658-b66265e8-6ebf-4bcb-b8c1-9c6ef396ea25.png">
+
 ## hostname -I 
+- hostname will give you hostname. -I will give you the all the ip addresses for the host.
+
 ## ip link show | awk '$1 == "link/ether" {print $2}' 
+- ip : ip command in Linux is present in the net-tools which is used for performing several network administration tasks. IP stands for Internet Protocol. This command is used to show or manipulate routing, devices, and tunnels. It is similar to ifconfig command but it is much more powerful with more functions and facilities attached to it. for more information : just google or --help
+- ip link show :  It is used to display link layer information, it will fetch characteristics of the link layer devices currently available. Any networking device which has a driver loaded can be classified as an available device. 
+
+<img width="850" alt="Screen Shot 2022-03-16 at 10 28 04 AM" src="https://user-images.githubusercontent.com/51042907/158529779-f30c9b99-db32-4789-8b5a-a4af77e6832a.png">
+
+- ip link show | awk '$1 == "link/ether" {print $2}' : The result of "ip link show" is piped to awk which will first check the first column is equal to "link/ether" if thats true it will print whatever in the column 2.
+
+<img width="509" alt="Screen Shot 2022-03-16 at 10 32 25 AM" src="https://user-images.githubusercontent.com/51042907/158530388-193d88a8-6084-41ae-94ae-c187252c381c.png">
+
 ## journalctl _COMM=sudo | grep COMMAND | wc -l
+
+- journalctl :  journalctl command in Linux is used to view systemd, kernel and journal logs. For more details : https://www.geeksforgeeks.org/journalctl-command-in-linux-with-examples/
+- journalctl _COMM=sudo : This will give you command with logs with _COMM=sudo present in it. (for this do journalctl _COMM=sudo).
+-journalctl _COMM=sudo | grep COMMAND : The result of the the journalctl command will be piped into grep command which will fetch rows with "COMMAND" present in it.
+
+<img width="1056" alt="Screen Shot 2022-03-16 at 10 49 18 AM" src="https://user-images.githubusercontent.com/51042907/158532742-320f749f-d20e-4ada-b895-2851aefc8661.png">
+
+- journalctl _COMM=sudo | grep COMMAND | wc -l : The result of the grep command will be piped into "wc -l" command and it give the line count.
+
+<img width="557" alt="Screen Shot 2022-03-16 at 10 52 40 AM" src="https://user-images.githubusercontent.com/51042907/158533198-fd01e263-bd4c-4e85-9976-365e87164687.png">
+
