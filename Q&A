@@ -36,4 +36,23 @@ Ans. The uname tool is most commonly used to determine the processor architectur
 the kernel running on the system.
 For more details: https://linuxize.com/post/uname-command-in-linux/#:~:text=The%20uname%20command%20is%20used%20to%20print%20basic%20system%20information,free%20to%20leave%20a%20comment
 
-Q. 
+Q. What is logical volume manager?
+Ans. Logical Volume Manager is a system of mapping and managing hard disk memory used on Linux-kernel's based systems. Instead of the old method of 
+partitioning disks on a single filesystem, and having it be limited to only 4 partitions, LVM allows you to work with "Logical Volumes", a more 
+dinamically and flexible way to deal with your hardware. For more details: https://web.mit.edu/rhel-doc/5/RHEL-5-manual/Deployment_Guide-en-US/ch-lvm.html
+
+Q. What is cron job?
+Ans. A cron job is a task that is executed at specified intervals. The tasks can be scheduled to run by a minute, hour, day of the month, month, 
+day of the week, or any combination of these.Cron jobs are generally used to automate system maintenance or administration, such as backing up 
+databases or data, updating the system with the latest security patches, checking the disk space usage , sending emails, and so on.Running cron 
+job every 5, 10, or 15 minutes are some of the most commonly used cron schedules. 
+For more details : https://linuxize.com/post/cron-jobs-every-5-10-15-minutes/
+
+Q. What is crontab?
+Ans. The crontab is a list of commands that you want to run on a regular schedule, and also the name of the command used to manage that list.
+For more details : https://www.geeksforgeeks.org/crontab-in-linux-with-examples/
+
+
+
+
+
