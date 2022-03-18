@@ -1,6 +1,7 @@
 # 42 Cursus Project: Born2beRoot
 
 - password : Asharaf#1.618
+- new user password : Abudhabi#1.618
 
 - *** if you are using 42 Mac for the project then you need to goto the Go->Computer->Macintosh HD->Users then open the folder with your user name inside there will be folder named by "goinfre". Use this folder to do the project. ***
 - *** if you want to run another virtual machine from port 4242 then remove the current ssh from /Users/mkaruvan/.ssh/known_hosts file ***
