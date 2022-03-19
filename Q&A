@@ -59,6 +59,29 @@ Q. password	requisite			pam_pwquality.so retry=3 minlen=10 ucredit=-1 dcredit=-1
 each of them?
 Ans. https://linux.die.net/man/8/pam_cracklib for more details.
 
+Q. what is wordpress? 
+Ans. WordPress is a content management system (CMS) that allows you to host and build websites. WordPress contains plugin architecture and a 
+template system, so you can customize any website to fit your business, blog, portfolio, or online store. WordPress (WP, WordPress.org) is a 
+free and open-source content management system (CMS) written in PHP[4] and paired with a MySQL or MariaDB database.
+
+Q. What is lighttpd?
+Ans. lighttpd is a web server for UNIX/Linux and Windows operating systems. It is an alternative to Apache web server. It is also called Lighty.
+It is designed to be secure, fast, standards-compliant, and flexible while being optimized for speed-critical environments.
+
+Q. What is mariadb?
+Ans. MariaDB, a fork of MySQL is one of the most popular open-source SQL (Structured Query Language) relational databases management systems, 
+made by the original developers of MySQL. It is designed for speed, reliability, and ease of use.
+
+Q. What is PHP?
+Ans. PHP is a general-purpose scripting language suited for Web development. PHP scripts can be embedded into HTML. PHP is an open source 
+server side scripting Language which originally stood for 'Personal Home Page' now stands for 'PHP: Hypertext Preprocessor', which is a 
+recursive acronym. It is a cross platform scripting language which is highly influenced by C, C++ and Java.
+
+Q. What is cockpit?
+Ans. Cockpit is a web-based graphical interface for servers, intended for everyone, especially those who are: new to Linux (including Windows admins)
+familiar with Linux and want an easy, graphical way to administer servers. expert admins who mainly use other tools but want an overview on individual 
+systems.
+
 
 
 
