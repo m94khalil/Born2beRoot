@@ -52,6 +52,13 @@ Q. What is crontab?
 Ans. The crontab is a list of commands that you want to run on a regular schedule, and also the name of the command used to manage that list.
 For more details : https://www.geeksforgeeks.org/crontab-in-linux-with-examples/
 
+Q. how to check groups in linux?
+Ans. execute the “cat” command on the “/etc/group” file.
+
+Q. password	requisite			pam_pwquality.so retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root, explain
+each of them?
+Ans. https://linux.die.net/man/8/pam_cracklib for more details.
+
 
 
 
