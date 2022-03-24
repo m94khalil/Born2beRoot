@@ -18,7 +18,7 @@ grep --help for mor details
 
 
 ## grep -c processor /proc/cpuinfo
-- The grep -c will return number of times the "physical id" is appear in the file.
+- The grep -c will return number of times the "processor" is appear in the file.
 
 <img width="350" alt="Screen Shot 2022-03-15 at 7 30 46 AM" src="https://user-images.githubusercontent.com/51042907/158300622-b80c5307-f318-4a36-a938-8a94fdb3bb82.png">
 
