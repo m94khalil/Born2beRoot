@@ -11,7 +11,7 @@ CPU=$(top -bn1 | grep '^%Cpu' | cut -c 9- | xargs | awk '{printf("%.1f%%"), $1 +
 BOOTLOG=$(who -b | awk '$1 == "system" {print $3 " " $4}')
 LVMLOG=$(if [ $(lsblk | grep "lvm" | wc -l) -eq 0 ]; then echo no; else echo yes; fi)
 TCPID=$(netstat -an | grep ESTABLISHED | wc -l)
-TCPALRT=$(if [ ${TCP} -eq 0 ]; then echo NOT ESTABLISHED; else echo ESTABLISHED; fi)
+TCPALRT=$(if [ ${TCPID} -eq 0 ]; then echo NOT ESTABLISHED; else echo ESTABLISHED; fi)
 USERNAMES=$(users | wc -w)
 HOSTIP=$(hostname -I)
 MACIP=$(ip link show | awk '$1 == "link/ether" {print $2}')
